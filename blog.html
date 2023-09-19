@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              xs: "411px",
+              sm: "540px",
+              smd: "640px",
+              md: "768px",
+              lg: "1024px",
+              xl: "1280px",
+              "2xl": "1400px",
+              "3xl": "1920px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .inter {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="inter mx-4 2xl:mx-14">
+    <header>
+      <div
+        class="flex flex-wrap gap-3 justify-center sm:justify-between mt-12 border-b border-[#17171733] pb-8 mb-8 font-medium text-lg"
+      >
+        <div class="">
+          <img src="./images/Logo.png" alt="" />
+        </div>
+        <a href="./index.html" class="bg-[#FF1F3D] px-5 py-2 rounded-md text-white">
+          Home
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="">
+        <img class="mb-12 w-full" src="./images/JS.jpg" alt="">
+        <h2 class="text-black text-4xl font-bold text-center mb-10">
+          Discuss about scope of var, let, and const
+        </h2>
+        <div class="grid lg:grid-cols-2 gap-12 text-justify mb-10">
+          <div class="">
+            <div class="">
+              <p class="mb-2">
+                <span class="text-black text-xl font-bold ">var:</span> Variables defined with “var” are function-scoped, meaning only the function in which they are declared may be accessed. “var” declarations are hoisted to the top of the function or global context in which they are contained. This implies that even if a “var” variable can be accessed before it is declared in the code, it will remain undefined up to that point. For example:
+              </p>
+              <img src="./images/ex-1.png" alt="">
+              <p class="my-2">
+                The “var” variable can be reassignable. For example:
+              </p>
+              <img src="./images/ex-2.png" alt="">
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <p class="mb-2">
+                <span class="text-black text-xl font-bold ">let:</span> Variables defined with “let” are block-scoped, which means that only the closest enclosing block, such as a function, loop, or conditional expression, has access to them. Hoisting is not used for “let” declarations, in contrast to “var”. Only after the declaration statement are they available.<br> For example:
+              </p>
+              <img src="./images/ex-3.png" alt="">
+              <p class="my-2">
+                The “let” variable can be reassignable. For example:
+              </p>
+              <img src="./images/ex-4.png" alt="">
+            </div>
+          </div>
+          <div class="">
+            <div class="">
+              <p class="mb-2">
+                <span class="text-black text-xl font-bold ">const:</span> Variables defined with "const" are also block-scoped, like "let" is. Additionally, "const" declarations are not hoisted. For example:
+              </p>
+              <img src="./images/ex-5.png" alt="">
+              <p class="my-2">
+                Variables defined with "const" are intended to be constants and cannot have their original values changed. It's crucial to remember that the attributes or components of objects and arrays that have been defined with const can still be changed. For example:
+              </p>
+              <img src="./images/ex-6.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2 class="text-black text-4xl font-bold text-center mb-10">
+          The use cases of null and undefined
+        </h2>
+        <div class="grid smd:grid-cols-2 gap-12 text-justify mb-10">
+          <div class="">
+            <h2 class="text-black text-2xl font-bold text-center mb-4">NULL</h2>
+            <ul class="list-decimal space-y-2 ml-4">
+              <li>Null is frequently used to express explicitly that a variable or object attribute is purposefully empty or has no meaningful value.</li>
+              <li>Absence that has been set by a user or developer to denote the absence of a legitimate object, value, or reference.</li>
+              <li>When we want to subsequently add a value to a variable or property, null can occasionally be used as a placeholder.</li>
+              <li>Null can be used in comparisons to determine whether a variable has been purposefully set to have no value.</li>
+            </ul>
+          </div>
+          <div class="">
+            <h2 class="text-black text-2xl font-bold text-center mb-4">UNDEFINED</h2>
+            <ul class="list-decimal space-y-4 ml-4">
+              <li>When a variable is declared in JavaScript but not given a value, it is by default given the value undefined. This is frequently used as the starting value by default.</li>
+              <li>A function inherently returns undefined if it does not explicitly return a value.</li>
+              <li>Undefined is returned if we attempt to access an object property that does not exist.</li>
+              <li>The missing parameters are undefined if a function is invoked with fewer arguments than its specified parameters.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="">
+        <h2 class="text-black text-4xl font-bold text-center mb-10">
+          What do you mean by REST API?
+        </h2>
+        <div class="mb-10 space-y-3 text-justify">
+          <p>
+            Representational State Transfer Application Programming Interface, or REST API, is an architectural design approach for creating networked applications. It is a collection of guidelines and rules for developing online services that make use of HTTP as its communication protocol. Resources are the main abstractions of a REST API. Resources can represent any item or thing that can be uniquely recognized by a URL (Uniform Resource Locator), such as people, goods, or articles. REST APIs carry out operations on resources using conventional HTTP protocols. The most popular HTTP techniques in REST include:
+          </p>
+          <p>
+            <span class="font-bold">GET:</span> Clients utilize GET to access server-side resources that are located at the given URL. They can specify parameters in the RESTful API request and cache GET requests to tell the server to filter data before providing it.
+          </p>
+          <p>
+            <span class="font-bold">POST:</span> To transmit information to the server, clients utilize POST. They send the request together with the data representation. The result of sending an identical POST request more than once is the creation of the same resource more than once.
+          </p>
+          <p>
+            <span class="font-bold">PUT:</span> Clients utilize PUT to update already existing server resources. In contrast to POST, a RESTful web service responds the same way to numerous PUT requests.
+          </p>
+          <p>
+            <span class="font-bold">DELETE:</span> To delete a resource, clients submit a DELETE request. The server status can be altered with a DELETE request. However, the request is denied if the user lacks the necessary authentication.
+          </p>
+        </div>
+      </section>
+    </main>
+</html>
